@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    segmentation_gunicorn:
+        volumes:
+            - static:/app/static
+            - media:/app/media
+        env_file:
+            - .env
+        build:
+            context: .
+        ports:
+            - "8000:8000"
+    nginx:
+        build: ./nginx
+        volumes:
+            - static:/app/static
+            - media:/app/media
+        ports:
+            - "80:80"
+        depends_on:
+            - segmentation_gunicorn
+            
+volumes:
+    static:
+    media:

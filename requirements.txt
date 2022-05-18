@@ -1,0 +1,6 @@
+DJANGO==4.0.4
+gunicorn==20.0.4
+tensorflow
+django-resized
+pillow==9.1.0
+django-crispy-forms==1.14.0
