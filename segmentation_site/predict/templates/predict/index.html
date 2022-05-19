@@ -1,3 +1,16 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}">
+
+<head>
+    <link rel="stylesheet" href="{% static 'predict/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'predict/css/index.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="float_container">
+        
+        <img src="{{MEDIA_URL}}main_image.jpg" alt="main_image.jpg">
+    </div>
+    <div class="tag"><a href="{% url 'fileupload' %}">Proceed to SICD</a></div>
+</body>

@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from predict.views import upload_image_view
+from predict.views import upload_image_view, index
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path("", index, name="index"),
     path('admin/', admin.site.urls),
     path("upload/", upload_image_view, name="fileupload"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

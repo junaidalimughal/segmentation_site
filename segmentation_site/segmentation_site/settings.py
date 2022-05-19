@@ -25,11 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-#SECRET_KEY = os.getenv("SECRET_KEY")
-#DEBUG = os.getenv("DEBUG")
-
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG")
+
+#SECRET_KEY = os.getenv("SECRET_KEY")
+#DEBUG = os.getenv("DEBUG")
 ALLOWED_HOSTS = ["*", 'micro.domains']
 
 # Application definition
@@ -70,10 +70,12 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'predict.context_processors.main_page_media',
             ],
         },
     },

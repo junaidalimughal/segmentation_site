@@ -1,0 +1,19 @@
+.float_container {
+    border: 1px solid #DDDDDD;
+    width: 200px;
+    height: 200px;
+    position: relative;
+ }
+ .tag {
+    float: left;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    z-index: 1000;
+        padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+ }
+ .float_container_2 {
+    font-size: 40px;
+ }

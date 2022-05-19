@@ -15,6 +15,11 @@ from .utilities import convert_numpy_to_django_files
 import tensorflow as tf
 from .forms import UploadImageModelForm
 
+
+def index(request):
+
+    return render(request, "predict/index.html", {})
+
 def upload_image_view(request):
     # create form object with a post request if post request is valid value otherwise none. 
     # Load the form with files if valid value otherwise do the same for files.
